@@ -6,29 +6,34 @@
 </head>
 <body>
 
-	<input type="password" id="caja" onkeypress="cambioDeLetra()">
+	<input type="password" id="in" onkeypress="cambioDeLetra()">
+	<p id="out"></p>
+	<button  id="encriptar" onclick ="mostrarCambio()">encriptar</button>
 	
 </body>
 <script>
 
-	var cadena ="hola";
+	//var cadena ="hola";
 	var cadenaEncriptada ="";
 
 	function cambioDeLetra() {
 		let x = String.fromCharCode(event.keyCode)
 
-		
 		if (onkeypress = true){
-			let newcadena = cadena + x;
-			console.log(newcadena);
+			//let newcadena = cadena + x;
+			encriptador(x);
 		}
+	}
 
+	function mostrarCambio(){
+
+		document.getElementById("out").innerHTML = "";
+		document.getElementById("out").innerHTML = cadenaEncriptada;
+		cadenaEncriptada = "";
 
 	}
 
-	window.onload = function(){
-
-		
+	function encriptador(cadena){
 		
 		for (var i = 0; i < cadena.length ; i++) {
 
