@@ -24,7 +24,33 @@
 			encriptador(x);
 		}
 	}
-cambio
+
+	// button element
+	var buttonEncriptar = document.getElementById("encriptar")
+
+	// touchstart handler
+	buttonEncriptar.addEventListener("touchStart", onlyTouch, false);
+
+	function onlyTouch(ev) {
+            
+            // Call preventDefault() to prevent any further handling
+            console.log("Here a touchstart event is trigerred"); 
+            ev.preventDefault();
+			mostrarCambio();
+    }
+
+	// click event handler
+	buttonEncriptar.addEventListener("click", onlyClick, false); 
+
+	function onlyClick(ev) {
+
+		// Call preventDefault() to prevent any further handling
+		console.log("Here a click event is trigerred"); 
+		ev.preventDefault();
+		console.log("After triggering an event");
+		mostrarCambio();
+	}
+
 	function mostrarCambio(){
 
 		document.getElementById("out").innerHTML = "";
