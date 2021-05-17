@@ -31,11 +31,10 @@
 	// touchstart handler
 	buttonEncriptar.addEventListener("touchstart", onlyTouch);
 
-	function onlyTouch(ev) {
+	function onlyTouch() {
             
             // Call preventDefault() to prevent any further handling
             console.log("Here a touchstart event is trigerred"); 
-            ev.preventDefault();
 			mostrarCambio();
     }
 
