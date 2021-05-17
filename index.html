@@ -3,14 +3,14 @@
 <body>
 
 <h1>DOM touchstart Event</h1>
-
+<div id="demo">
 <input type="text" id="in" onkeypress="cambioDeLetra()">
 
 <p id="myP">Touch this paragraph to encripted.</p>
 
 <p><strong>Note:</strong> This example is for touch devices only.</p>
 
-<p id="demo"></p>
+</div>
 
 <script>
 var cadenaEncriptada ="";
@@ -18,7 +18,9 @@ var cadenaEncriptada ="";
 document.getElementById("myP").addEventListener("touchstart", myFunction);
 
 function myFunction() {
-  document.getElementById("demo").textContent = cadenaEncriptada;
+	var txt = "<p>"+cadenaEncriptada+"</p>"
+	
+  document.getElementById("demo").innerHTML = txt;
 }
 
 function cambioDeLetra() {
